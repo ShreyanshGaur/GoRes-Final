@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - GoRes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body class="login-body">
+    <div class="login-card">
+        <h2>Welcome Back!</h2>
+        <p>Sign in to access your dashboard.</p>
+
+        <div id="g_id_onload"
+             data-client_id="684228949044-d48fj0v41sj38fdicsprbt9c8bti1csv.apps.googleusercontent.com"
+             data-login_uri="http://localhost/login"
+             data-callback="handleGoogleLogin">
+        </div>
+        <div class="g_id_signin" data-type="standard" data-shape="rectangular" data-theme="outline" data-text="signin_with" data-size="large" data-logo_alignment="left"></div>
+        
+        <div class="divider">OR</div>
+
+        <form class="login-form" id="login-form">
+            <input type="email" id="email" placeholder="Email Address" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <a href="forgot-password.html" class="forgot-password-link">Forgot Password?</a>
+            <button type="submit" class="btn btn-cta">Log In</button>
+        </form>
+        <p class="form-link">Don't have an account? <a href="signup.html">Sign Up</a></p>
+    </div>
+
+    <div id="feedback-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h3 id="modal-title">Notice</h3>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

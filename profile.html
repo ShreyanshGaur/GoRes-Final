@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Profile - GoRes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <!-- ===== LEFT SIDEBAR NAVBAR ===== -->
+        <nav class="left-sidebar">
+            <a href="dashboard.html" class="logo">GoRes ✨</a>
+            <ul>
+                <li><a href="dashboard.html"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
+                <li><a href="ats-checker.html"><i class="fas fa-search"></i> <span>ATS Checker</span></a></li>
+                <li><a href="history.html"><i class="fas fa-history"></i> <span>History</span></a></li>
+                <li><a href="templates.html"><i class="fas fa-file-alt"></i> <span>Templates</span></a></li>
+                <li><a href="profile.html" class="active"><i class="fas fa-user-circle"></i> <span>Profile</span></a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <!-- MODIFIED LINK -->
+                <a href="settings.html"><i class="fas fa-cog"></i> <span>Settings</span></a>
+            </div>
+        </nav>
+
+        <!-- ===== MAIN CONTENT AREA ===== -->
+        <div class="main-content">
+             <header class="main-header">
+                <h2>Your Profile</h2>
+                 <div class="user-profile">
+                    <span>Jessica Lee</span>
+                    <div class="profile-avatar">
+                        <img src="https://i.imgur.com/Jg6L53v.jpg" alt="User profile picture" id="profile-img" class="hidden">
+                        <div class="profile-initials hidden" id="profile-initials"></div>
+                    </div>
+                    <a href="index.html" class="btn btn-logout">Logout</a>
+                </div>
+            </header>
+            <div class="content-area">
+                <div class="profile-card">
+                    <h3>Profile Information</h3>
+                    <form id="profile-form">
+                        <div class="form-group">
+                            <label for="profile-username">Username</label>
+                            <input type="text" id="profile-username" placeholder="Your username">
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-email">Email Address</label>
+                            <input type="email" id="profile-email" placeholder="Your email" disabled>
+                        </div>
+                        <button type="submit" class="btn btn-cta">Update Profile</button>
+                        <p class="form-message" id="profile-message"></p>
+                    </form>
+                </div>
+                 <div class="profile-card">
+                    <h3>Change Password</h3>
+                    <form id="password-form">
+                        <div class="form-group">
+                            <label for="new-password">New Password</label>
+                            <input type="password" id="new-password" placeholder="Enter new password (min. 6 characters)">
+                        </div>
+                        <button type="submit" class="btn">Change Password</button>
+                        <p class="form-message" id="password-message"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
